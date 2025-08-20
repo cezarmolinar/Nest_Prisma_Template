@@ -1,12 +1,12 @@
 // @ts-check
-import eslint from '@eslint/js';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import eslint from '@eslint/js'
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import globals from 'globals'
+import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
   {
-    ignores: ['eslint.config.mjs'],
+    ignores: ['eslint.config.mjs']
   },
   eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
@@ -15,14 +15,14 @@ export default tseslint.config(
     languageOptions: {
       globals: {
         ...globals.node,
-        ...globals.jest,
+        ...globals.jest
       },
       sourceType: 'commonjs',
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
+        tsconfigRootDir: import.meta.dirname
+      }
+    }
   },
   {
     rules: {
@@ -36,7 +36,7 @@ export default tseslint.config(
         'error',
         {
           useEditorConfig: false,
-          semi: true, // sem ;
+          semi: false, // sem ;
           singleQuote: true, // aspas simples
           printWidth: 80, // largura da linha
           endOfLine: 'lf', // final de linha
@@ -46,10 +46,9 @@ export default tseslint.config(
           arrowParens: 'avoid', // parênteses em arrow functions
           proseWrap: 'preserve', // quebra de linha em texto
           tabWidth: 2, // largura da tabulação
-          //useTabs: true, // usar tabs em vez de espaços
-          trailingComma: 'none', // vírgula no final
-        },
-      ],
-    },
-  },
-);
+          trailingComma: 'none' // vírgula no final
+        }
+      ]
+    }
+  }
+)

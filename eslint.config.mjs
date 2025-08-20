@@ -31,24 +31,24 @@ export default tseslint.config(
       '@typescript-eslint/no-unsafe-argument': 'warn', // regra de argumentos inseguros
       '@typescript-eslint/interface-name-prefix': 'off', // regra de prefixo em interfaces
       '@typescript-eslint/explicit-function-return-type': 'off', // regra de tipo de retorno explícito em funções
-      '@typescript-eslint/explicit-module-boundary-types': 'off', // regra de tipos explícitos em limites de módulo
-      'prettier/prettier': [
-        'error',
-        {
-          useEditorConfig: false,
-          semi: false, // sem ;
-          singleQuote: true, // aspas simples
-          printWidth: 80, // largura da linha
-          endOfLine: 'lf', // final de linha
-          quoteProps: 'as-needed', // aspas em propriedades de objetos
-          bracketSpacing: true, // espaçamento entre chaves
-          jsxBracketSameLine: false, // JSX colchetes na mesma linha
-          arrowParens: 'avoid', // parênteses em arrow functions
-          proseWrap: 'preserve', // quebra de linha em texto
-          tabWidth: 2, // largura da tabulação
-          trailingComma: 'none' // vírgula no final
-        }
-      ]
+      '@typescript-eslint/explicit-module-boundary-types': 'off' // regra de tipos explícitos em limites de módulo
+      // 'prettier/prettier': [
+      //   'error',
+      //   {
+      //     useEditorConfig: false,
+      //     semi: false, // sem ;
+      //     singleQuote: true, // aspas simples
+      //     printWidth: 80, // largura da linha
+      //     endOfLine: 'lf', // final de linha
+      //     quoteProps: 'as-needed', // aspas em propriedades de objetos
+      //     bracketSpacing: true, // espaçamento entre chaves
+      //     jsxBracketSameLine: false, // JSX colchetes na mesma linha
+      //     arrowParens: 'avoid', // parênteses em arrow functions
+      //     proseWrap: 'preserve', // quebra de linha em texto
+      //     tabWidth: 2, // largura da tabulação
+      //     trailingComma: 'none' // vírgula no final
+      //   }
+      // ]
     }
   }
 )

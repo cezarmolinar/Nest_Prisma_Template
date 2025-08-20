@@ -36,6 +36,7 @@ export class UsersService {
 
   async findByEmail(email: string) {
     return this.prisma.user.findUnique({
+      // eslint-disable-next-line prettier/prettier
       where: { email }
     })
   }
